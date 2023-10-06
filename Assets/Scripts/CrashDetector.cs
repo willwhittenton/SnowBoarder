@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class CrashDetector : MonoBehaviour
     {
         if(other.tag == "Ground")
         {
-            Debug.Log("You crashed!");
+            SceneManager.LoadScene(0);
         }
     }
 }
